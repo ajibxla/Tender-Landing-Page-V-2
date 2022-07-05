@@ -1,38 +1,1058 @@
+@import url(//db.onlinewebfonts.com/c/7017698b5c5a2cc397cd3b0c0984d76f?family=U8);
+@font-face {
+  font-family: "U8";
+  src: url("//db.onlinewebfonts.com/t/7017698b5c5a2cc397cd3b0c0984d76f.eot");
+  src: url("//db.onlinewebfonts.com/t/7017698b5c5a2cc397cd3b0c0984d76f.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/7017698b5c5a2cc397cd3b0c0984d76f.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/7017698b5c5a2cc397cd3b0c0984d76f.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/7017698b5c5a2cc397cd3b0c0984d76f.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/7017698b5c5a2cc397cd3b0c0984d76f.svg#U8")
+      format("svg");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  width: 85%;
+  margin: auto;
+  position: relative;
+  /* height: 100vh; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  height: 10vh;
+  padding-top: 23px;
+  width: 85%;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.nav-menu {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  gap: 57px;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-menu {
+    justify-content: space-between;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-link-holder {
+  display: flex;
+  height: 86px;
+  align-items: center;
+  gap: 53px;
+}
+
+.nav-link-holder ul li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link-holder ul:nth-child(1) {
+  display: none;
+}
+
+.nav-dropdown {
+  position: fixed;
+  background-color: white;
+  height: 100vh;
+  /* overflow: hidden; */
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 2;
+  padding: 50px 30px 0 30px;
+}
+
+.dropdown-holder {
+  height: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.dropdown-holder .nav-link > li {
+  color: #000000;
+  list-style: none;
+  padding-bottom: 50px;
+  padding-top: 3px;
+}
+
+.nav-link-holder .nav-link > li > a {
+  text-decoration: none;
+  font-family: "Mulish";
+  font-style: normal;
+  font-size: 16.5px;
+  line-height: 21px;
+  color: rgba(0, 0, 0, 0.75);
+  /* max-width: 221px; */
+}
+
+.dropdown-holder .nav-link > li > a {
+  text-decoration: none;
+  font-family: "Mulish";
+  font-style: normal;
+  font-size: 17px;
+  line-height: 21px;
+  color: rgba(0, 0, 0, 0.75);
+  margin-top: 18px;
+  max-width: 221px;
+}
+
+.navDropDown-btn {
+  cursor: pointer;
+}
+
+.active {
+  transform: translateX(0vw) translateZ(0);
+}
+
+.logo {
+  height: 34px;
+  width: 108px;
+}
+
+.tender-logo {
+  height: 100%;
+  width: 100%;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger-line {
+  height: 3px;
+  width: 30px;
+  background-color: #000;
+}
+
+.banner {
+  /* height: 80vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 75px;
+  margin: auto;
+  margin-bottom: 75px;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 334px;
+  margin: auto;
+}
+
+.banner-heading {
+  padding-bottom: 48px;
+  text-align: center;
+  font-family: "U8";
+  font-size: 45xpx;
+  line-height: 39px;
+}
+
+.banner-text p {
+  /* max-width: 334px; */
+  /* width: 130%; */
+  font-family: "U8";
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.63);
+  margin-bottom: 75px;
+}
+
+.banner Form,
+.journey Form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: inherit;
+  margin: auto;
+  gap: 18px;
+  margin-bottom: 100px;
+  max-width: 310px;
+}
+
+.banner Form input,
+.journey input {
+  height: 54px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 0.5px solid rgba(0, 0, 0, 0.6);
+  font-family: "BR Firma";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 39px;
+  color: rgba(0, 0, 0, 0.38);
+  padding-left: 10px;
+  width: 100%;
+}
+
+.banner Form button,
+.journey button {
+  width: 100%;
+  height: 54px;
+  background: #000000;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-family: "BR Firma";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  cursor: pointer;
+}
+.center-banner-image {
+  /* padding-left: 40px; */
+  display: flex;
+}
+
+.banner-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 278px;
+  align-self: flex-end;
+  height: 390.21px;
+  background: #f9f8f7;
+  border: 3px solid #000000;
+  border-radius: 20px;
+  position: relative;
+}
+
+.banner-image img {
+  position: absolute;
+  margin: auto;
+  padding-right: 48px;
+}
+
+.how-it-works {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 1100px; */
+}
+
+.how-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  padding-bottom: 115px;
+}
+.how-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "BR Firma";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+  margin-bottom: 46px;
+}
+
+.svg-design {
+  margin-top: 20px;
+}
+
+.how-cardholder .how {
+  width: 320px;
+  height: 299.64px;
+  background: #f9f8f7;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.how-cardholder .how img {
+  padding-bottom: 19px;
+  padding-top: 31px;
+}
+
+.how-cardholder .how h3 {
+  padding-bottom: 24px;
+  font-family: "BR Firma";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.how-text {
+  font-family: "U8";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 31px;
+  text-align: center;
+  color: #000000;
+  padding-bottom: 43px;
+  padding-left: 26px;
+  padding-right: 26px;
+  max-height: 100px;
+  min-height: 100px;
+}
+
+.circle {
+  width: 40.01px;
+  height: 40.01px;
+  background: rgba(217, 217, 217, 0.59);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.circle p {
+  position: absolute;
+  top: 5px;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  color: #000000;
+}
+
+.why-tender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 76px;
+}
+.why-tender-cardholder {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 68px;
+}
+
+.why-us-heading {
+  font-family: "BR Firma";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+  padding-top: 68px;
+  padding-bottom: 57px;
+}
+
+.why-tender-card {
+  display: flex;
+  gap: 35px;
+}
+
+.why-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why-left h2 {
+  font-family: "BR Firma";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.line {
+  margin-top: 18px;
+  width: 2px;
+  height: 90px;
+  background-color: #e6e6e5;
+}
+
+.why-right h3 {
+  font-family: "BR Firma";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.why-right p {
+  font-family: "U8";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  margin-top: 18px;
+  max-width: 221px;
+}
+
+.why-tender-card:nth-child(3) .line {
+  display: none;
+}
+
+.why-tender form {
+  margin-bottom: 0;
+}
+
+.why-btn {
+  min-width: 228px;
+  max-width: 100%;
+  height: 54px;
+  background: #000000;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-family: "BR Firma";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 19px;
+  cursor: pointer;
+}
+
+.why-btn:hover > a {
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .why-btn {
+    width: 100%;
+  }
+}
+
+.why-btn a {
+  color: white;
+  text-decoration: none;
+  font-size: 16.5px;
+}
+
+.faq {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.faq-heading {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.faq .faq-heading h1 {
+  font-family: "BR Firma";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 75px;
+  line-height: 94px;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(196, 195, 187, 0) 100%);
+  opacity: 0.1;
+  z-index: -1;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(196, 195, 187, 0) 100%);
+  -webkit-background-clip: text;
+  /* -webkit-text-fill-color: transparent; */
+  background-clip: text;
+  /* text-fill-color: transparent; */
+}
+
+.faq .faq-heading h3 {
+  position: absolute;
+  top: 57px;
+  font-family: "BR Firma";
+  font-style: normal;
+  width: 100%;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+  opacity: 1;
+  z-index: 1;
+}
+
+aside {
+  width: 100%;
+}
+
+.accordion-card-holder {
+  /* width: 50%; */
+  margin: auto;
+}
+
+.filter {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.question-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 89px;
+  max-height: auto;
+  transition: all 0.5s ease-in-out;
+  /* min-width: 300px; */
+  max-width: 100%;
+}
+
+.question-card .line {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 20px;
+}
+
+/* .line-after {
+  margin-top: 20px;
+} */
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  /* min-width: 306px; */
+  width: 80%;
+  margin: auto;
+}
+
+.title h3 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 21px;
+  padding-bottom: 15px;
+  max-width: 300px;
+}
+
+.btn {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+/* .question-card {
+  height: 150px;
+} */
+
+.question-card p {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 19px;
+  width: 80%;
+  margin: auto;
+  padding-right: 20px;
+}
+
+.title .action {
+  transform: rotate(360deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.p-action {
+  height: auto;
+  transition: height 0.5s ease-in-out;
+}
+
+.journey {
+  background-color: #000;
+  height: 280px;
+}
+
+.journey-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 39px;
+}
+
+.journey h1 {
+  font-family: "BR Firma";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.journey Form {
+  margin-bottom: 0;
+  margin-top: 32px;
+}
+
+.journey Form button {
+  background: #222222;
+}
+
+.journey Form button:hover {
+  background-color: white;
+  color: #000;
+  border: 1px #000 solid;
+  transition: all 0.5s ease-in;
+}
+
+footer {
+  height: 63px;
+  background-color: #f9f8f7;
+}
+
+.footer-container {
+  display: flex;
+  height: inherit;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+footer p {
+  font-family: "BR Firma";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 25px;
+}
+
+.slider-holder {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  transition: all 0.3s linear;
+}
+.testimonial img {
+  height: 200px;
+  width: 200px;
+}
+
+.slider {
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: white;
+  color: black;
+  width: 103px;
+  height: 36px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 19px;
+  border: black 1px solid;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+.active {
+  background-color: #000;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (min-width: 1000px) {
+  .banner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    gap: 20px;
+  }
+
+  .banner-text {
+    max-width: 500px;
+    margin: 0;
+  }
+
+  .banner-heading,
+  .banner-text p {
+    text-align: left;
+    min-width: 300px;
+    width: 100%;
+  }
+
+  .banner-heading {
+    font-size: 45px;
+    padding-bottom: 22px;
+  }
+
+  .banner-text p {
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .center-banner-image {
+  }
+  .banner-image {
+    margin-left: 100px;
+  }
+
+  .banner-image img {
+  }
+
+  .banner Form {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    max-width: 594px;
+    margin-bottom: 0;
+  }
+
+  .journey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .journey-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    padding: 0;
+  }
+
+  .journey Form {
+    margin: 0;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    max-width: 500px;
+    margin-bottom: 0;
+  }
+
+  .journey input {
+    margin: 0;
+    width: 100%;
+    width: 61%;
+    border-radius: 0;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 39px;
+  }
+
+  .journey button {
+    width: 39%;
+    border-radius: 0 10px 10px 0;
+    border: 0.5px solid rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 39px;
+  }
+
+  .banner-text-email {
+    /* padding-top: 50px; */
+  }
+  .banner Form {
+    margin: 0;
+    height: auto;
+  }
+  .banner Form input {
+    margin: 0;
+    width: 100%;
+    width: 61%;
+    border-radius: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 39px;
+  }
+
+  .banner Form button {
+    width: 39%;
+    border-radius: 0 10px 10px 0;
+    border: 0.5px solid rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 39px;
+  }
+
+  .how-heading {
+    font-size: 34px;
+    line-height: 39px;
+  }
+
+  .how-it-works {
+    width: 100%;
+    /* margin: auto; */
+  }
+  /* .how-cardholder {
+    background: #f9f8f7;
+    height: 269px;
+    width: 288px;
+  } */
+  .how-cards {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    gap: 20px;
+  }
+
+  .circle {
+    margin-top: -20px;
+  }
+
+  .why-tender {
+    flex-direction: row;
+    max-width: 85%;
+    margin: auto;
+    gap: 60px;
+    margin-bottom: 100px;
+  }
+
+  .why-us-heading {
+    font-size: 34px;
+    line-height: 39px;
+  }
+
+  .why-tender form {
+    /* display: none; */
+  }
+
+  .question-card .line {
+    width: 100%;
+  }
+
+  .p-action {
+    height: auto;
+  }
+
+  .faq .faq-heading h1 {
+    font-weight: 600;
+    font-size: 90px;
+    line-height: 157px;
+  }
+
+  .faq .faq-heading h3 {
+    font-size: 34px;
+    line-height: 39px;
+    top: 80px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 1200px) {
+  .banner-heading {
+    font-size: 65px;
+    line-height: 82.42px;
+    font-weight: 700;
   }
-  to {
-    transform: rotate(360deg);
+
+  .banner-text p {
+    font-weight: 400;
+    font-size: 16.5px;
+    line-height: 42px;
   }
+
+  .center-banner-image {
+    padding-left: 40px;
+    height: auto;
+    width: auto;
+  }
+  .banner-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 278.17px;
+    height: 390.21px;
+    background: #f9f8f7;
+    border: 3px solid #000000;
+    border-radius: 20px;
+    position: relative;
+    height: 613px;
+    width: 437px;
+    margin-left: 0;
+  }
+
+  .banner-image img {
+    position: absolute;
+    /* margin: auto; */
+    margin-right: 100px;
+    height: 531px;
+    width: 440px;
+    padding: 0;
+  }
+
+  .banner-text {
+    max-width: 700px;
+    margin: 0;
+  }
+
+  .banner-heading,
+  .banner-text p {
+    text-align: left;
+    min-width: 300px;
+    width: 100%;
+  }
+
+  .banner-text p {
+    max-width: 590px;
+  }
+
+  .how-it-works {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .how-heading {
+    font-weight: 600;
+    font-size: 51px;
+    line-height: 64px;
+  }
+
+  .how-cardholder .how {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 17px;
+  }
+
+  .how-text {
+    padding: 0;
+    text-align: left;
+    padding-right: 50px;
+  }
+  .why-tender {
+    width: 100%;
+    justify-content: center;
+    /*
+     gap: 0; */
+  }
+
+  .filter {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin-right: 61px;
+    cursor: pointer;
+  }
+
+  .filter-btn {
+    padding: 10px;
+    gap: 10px;
+    width: 287px;
+    height: 54px;
+  }
+
+  .accordion-card-holder {
+    margin: 0;
+    width: 100%;
+  }
+
+  .accordion-card {
+    margin-top: -12px;
+  }
+
+  aside {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 500px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  /* .container {
+    width: 70%;
+    margin: auto;
+  } */
+
+  /* nav {
+    width: 70%;
+    margin: auto;
+  } */
+  .why-us-heading {
+    font-weight: 600;
+    font-size: 51px;
+    line-height: 64px;
+  }
+  .why-left h2 {
+    font-family: "BR Firma";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .why-right h3 {
+    max-width: auto;
+    font-weight: 600;
+    /* font-size: 24px; */
+    line-height: 30px;
+  }
+
+  .how-text {
+    font-size: 16.5px;
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .why-right p {
+    font-family: "U8";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16.5px;
+    line-height: 23px;
+    max-width: 600px;
+  }
+}
+
+.tours {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+}
+
+.tours button {
+  height: 100px;
+  width: 100px;
 }
